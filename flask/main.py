@@ -8,7 +8,7 @@ from flask import render_template
 app = Flask(__name__)
 @app.route("/")
 def hello():
-    return "<h1>Jaaa</h1>"
+    return "<h1>Ja</h1>"
 
 @app.route('/<user>')
 def test(user):
