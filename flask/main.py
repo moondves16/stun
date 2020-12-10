@@ -23,7 +23,7 @@ my_lng = response_geolocation.json()["location"]["lng"]
 
 url_front_google_place = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
 url_loc_google_place = str(my_lat) + "," + str(my_lng)
-url_back_google_place = "&radius=3000&type=restaurant&key="
+url_back_google_place = "&radius=1000&pagetoken&type=restaurant&key="
 key_google_place = "AIzaSyC-6broabl69bcgNIlIrHGXtRcwHO-i6fk"
 
 response_google_place = requests.get(url_front_google_place + url_loc_google_place + url_back_google_place + key_google_place)
@@ -77,6 +77,15 @@ url_front_google_details = "https://maps.googleapis.com/maps/api/place/details/j
 url_back_google_details = "&fields=name,rating,opening_hours,formatted_phone_number&key="
 key_google_details = "AIzaSyC-6broabl69bcgNIlIrHGXtRcwHO-i6fk"
 
+is_many = False
+
+try:
+    response_google_place.json()["next_page_token"]
+
+except:
+    is_many = True
+
+
 
 """
 #등록되어 있는 음식점 정보 중 오픈시간, 마감시간
@@ -91,6 +100,11 @@ for i in range(0, store_cnt):
 """
 result_json = json.dumps(db_list, indent=3, ensure_ascii=False)
 
+"""
+url_server_test = "http://54.180.34.116:5000/view"
+response_server_test = requests.get(url_server_test)
+"""
+
 @app.route("/")
 def hello():
 
@@ -99,8 +113,11 @@ def hello():
         print(db_list[i])
     print("음식점 수 : " + str(store_cnt))
     """
-    print(result_json)
+    #print(response_server_test.json()["result"])
+    #print(result_json)
+    print(type(result_json))
     print(my_lat, my_lng)
+    print(is_many)
     return render_template('index.html')
 
 @app.route('/view')
@@ -121,5 +138,6 @@ def map():
     return render_template('map.html', location_x = my_lat, location_y = my_lng)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port="5000")
+    #app.run(host="0.0.0.0", port="5000")
+    app.run()
 

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{{aa}}
-<script type="text/javascript"></script>
-<script>
-</script>
-</body>
+<html>
+  <head>
+
+    <script type="text/javascript">
+      onload = function () {
+
+
+        var myVar = {{aa|tojson}};
+        var work =JSON.parse(myVar, undefined, 3);
+
+        document.getElementById("json").textContent = JSON.stringify(work, undefined, 3);
+        };
+    </script>
+  </head>
+  <body>
+
+    <pre id="json"></pre>
+
+
+  </body>
 </html>
