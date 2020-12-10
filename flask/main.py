@@ -138,6 +138,6 @@ def map():
     return render_template('map.html', location_x = my_lat, location_y = my_lng)
 
 if __name__ == "__main__":
-    #app.run(host="0.0.0.0", port="5000")
-    app.run()
+    app.run(host="0.0.0.0", port="5000")
+    #app.run()
 
