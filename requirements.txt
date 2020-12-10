@@ -1,0 +1,42 @@
+antiorm==1.2.1
+astroid @ file:///C:/ci/astroid_1592481955828/work
+atomicwrites==1.4.0
+attrs==20.3.0
+certifi==2020.6.20
+cffi==1.14.3
+chardet==3.0.4
+click==7.1.2
+colorama @ file:///tmp/build/80754af9/colorama_1603211150991/work
+cryptography==3.2.1
+Flask==1.1.2
+idna==2.10
+importlib-metadata==2.0.0
+iniconfig==1.1.1
+isort @ file:///tmp/build/80754af9/isort_1602603989581/work
+itsdangerous==1.1.0
+Jinja2==2.11.2
+lazy-object-proxy==1.4.3
+MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+mccabe==0.6.1
+mysql==0.0.2
+mysql-connector-python==8.0.18
+mysqlclient==2.0.1
+packaging==20.4
+pluggy==0.13.1
+protobuf==3.6.0
+py==1.9.0
+pycparser==2.20
+pylint @ file:///C:/ci/pylint_1598605958085/work
+PyMySQL==0.10.1
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+pytest==6.1.2
+requests==2.25.0
+six==1.15.0
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+typed-ast==1.4.1
+urllib3==1.26.2
+Werkzeug==1.0.1
+wincertstore==0.2
+wrapt==1.11.2
+zipp==3.4.0
