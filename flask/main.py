@@ -317,9 +317,9 @@ def get_html():
     my_rad = request.args.get('radius', 2000)
     my_meals_t = request.args.get('mealstime', 20)
 
-    if(my_auto_loc is 1):
+    if(my_auto_loc == 1):
         return render_template('view.html', aa=green_light_api_auto(radius=my_rad, meals_time=my_meals_t))
-    elif(my_auto_loc is 0):
+    elif(my_auto_loc == 0):
         return render_template('view.html',
                                aa=green_light_api(lat=my_lt, lng=my_ln, radius=my_rad, meals_time=my_meals_t))
 
