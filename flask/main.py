@@ -324,6 +324,6 @@ def get_html():
                                aa=green_light_api(lat=my_lt, lng=my_ln, radius=my_rad, meals_time=my_meals_t))
 
 if __name__ == "__main__":
-    #app.run(host="0.0.0.0", port="5000")
-    app.run()
+    app.run(host="0.0.0.0", port="5000")
+    #app.run()
 
