@@ -299,7 +299,7 @@ def green_light_api(lat = 0, lng = 0, radius = 2000, meals_time = 20):
 
     return result_json
 
-@app.route("/home")
+@app.route("/")
 def hello():
 
     """
@@ -323,7 +323,13 @@ def get_html():
     elif my_auto_loc == '0':
         return render_template('view.html',
                                aa=green_light_api(lat=my_lt, lng=my_ln, radius=my_rad, meals_time=my_meals_t))
+@app.route("/product")
+def product():
+    return render_template('product.html')
 
+@app.route("/documents")
+def documents():
+    return render_template('documents.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")

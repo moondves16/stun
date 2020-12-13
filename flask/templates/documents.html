@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Business Frontpage - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/business-frontpage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../"><b>Green Light</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../product">Product</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Documents
+            <span class="sr-only">(current)</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2"><b>Green Light</b></h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <h1 class="my-4">Category</h1>
+        <div class="list-group">
+          <a href="../" class="list-group-item">Home</a>
+          <a href="../product" class="list-group-item">Product</a>
+          <a href="#" class="list-group-item active">Documents</a>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <!-- /.card -->
+
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header" style="background-color: #9fcdff">
+            <p style="font-size: large; color: white; height: 20px";><b>Parameter</b></p>
+          </div>
+          <div class="card-body">
+            <table border="1" align="center">
+              <tr style="height: 50px; font-size: large; font-weight: bold" bgcolor="#eee" ><!-- 첫번째 줄 시작 -->
+                <td align="center" width="120px">Name</td>
+                <td align="center" width="80px">Type</td>
+                <td align="center" width="400px">Description</td>
+                <td align="center" width="100px">Default</td>
+              </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">auto</td>
+                <td align="center">String</td>
+                <td align="center">자동 위치 기능 사용 여부( 값 : 0 or 1)</td>
+                <td align="center">0</td>
+              </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">lat</td>
+                <td align="center">Double</td>
+                <td align="center">현재 사용자 위치의 위도 값</td>
+                <td align="center">36.7657</td>
+              </tr><!-- 첫번째 줄 끝 -->
+              <tr style="height: 50px;"><!-- 두번째 줄 시작 -->
+                <td align="center">lng</td>
+                <td align="center">Double</td>
+                <td align="center">현재 사용자 위치의 경도 값</td>
+                <td align="center">127.2873</td>
+              </tr><!-- 두번째 줄 끝 -->
+              <tr style="height: 50px">
+                <td align="center">radius</td>
+                <td align="center">Int</td>
+                <td align="center">음식점 탐색 범위 (단위 : 미터)</td>
+                <td align="center">2000</td>
+              </tr>
+              <tr style="height: 50px">
+                <td align="center">mealstime</td>
+                <td align="center">Int</td>
+                <td align="center">사용자의 식사 시간 (단위 : 분)</td>
+                <td align="center">20</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br><br>
+        <!-- /.card -->
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header" style="background-color: #9fcdff">
+            <p style="font-size: large; color: white; height: 20px";><b>Word</b></p>
+          </div>
+          <div class="card-body">
+            <table border="1" align="center">
+
+              <tr style="height: 50px; font-size: large; font-weight: bold" bgcolor="#eee" ><!-- 첫번째 줄 시작 -->
+                <td align="center" width="120px">Name</td>
+                <td align="center" width="80px">Type</td>
+                <td align="center" width="400px">Description</td>
+                <td align="center" width="200px">Value</td>
+              </tr><!-- 첫번째 줄 끝 -->
+              <tr style="height: 50px;"><!-- 두번째 줄 시작 -->
+                <td align="center">index</td>
+                <td align="center">Int</td>
+                <td align="center">탐색된 음식점의 순번</td>
+                <td align="center">-</td>
+              </tr><!-- 두번째 줄 끝 -->
+              <tr style="height: 50px">
+                <td align="center">name</td>
+                <td align="center">String</td>
+                <td align="center">탐색한 음식점의 상호명</td>
+                 <td align="center">-</td>
+              </tr>
+              <tr style="height: 50px">
+                <td align="center">placeID</td>
+                <td align="center">String</td>
+                <td align="center">음식점의 고유 ID</td>
+                 <td align="center">-</td>
+              </tr>
+
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">lat</td>
+                <td align="center">Double</td>
+                <td align="center">음식점의 위도</td>
+                 <td align="center">-</td>
+              </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">lng</td>
+                <td align="center">Double</td>
+                <td align="center">음식점의 경도</td>
+                 <td align="center">-</td>
+               </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">open</td>
+                <td align="center">Time</td>
+                <td align="center">음식점 오픈시간</td>
+                <td align="center">데이터 없음 : -1</td>
+               </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">close</td>
+                <td align="center">Time</td>
+                <td align="center">음식점 마감시간</td>
+                <td align="center">데이터 없음 : -1</td>
+               </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">transit</td>
+                <td align="center">Int</td>
+                <td align="center">음식점까지 대중교통으로 이동 시 소요되는 시간</td>
+                <td align="center">데이터 없음 : -1</td>
+               </tr>
+              <tr style="height: 50px;"><!-- 첫번째 줄 시작 -->
+                <td align="center">driving</td>
+                <td align="center">Int</td>
+                <td align="center">음식점까지 자동차로 이동 시 소요시간</td>
+                <td align="center">데이터 없음 : -1</td>
+               </tr>
+            </table>
+          </div>
+        </div>
+        <br><br>
+        <div class="card-header">
+          <b>사용 방법</b>
+        </div>
+        <div class="card card-outline-secondary my-4">
+          <div class="card-body">
+            <p>★ <b>전체 Default 값</b>
+              <br>-> 모든 파라미터는 입력하지 않아도 default 값이 지정되어 있기 때문에 정상적으로 json을 불러올  수 있습니다. (<a href = http://54.180.34.116:5000/api/>http://54.180.34.116:5000/api/</a>)</p>
+            <hr>
+            <p>★ <b>사용자가 원하는 위치의 위도 경도 검색</b>
+              <br>
+              -> auto 파라미터 사용 시 0을 입력하면 자신이 원하는 위치의 위도 경도를 입력할 수 있습니다.
+(<a href = http://54.180.34.116:5000/api/?auto=0&lat=37.32&lng=127.33>http://54.180.34.116:5000/api/?auto=0&lat=37.32&lng=127.33</a>)</p>
+            <hr>
+            <p>★ <b>사용자의 현재 위치 검색</b>
+              <br>-> auto 파라미터 사용 시 1을 입력하면 Google geolocation API를 사용해 자신의 위치를 사용합니다.
+(이 기능은 서버에서 사용 시 서버 컴퓨터 기준으로 위치가 잡히기 때문에 API 사용자가 Green Light API를 재가공하여 사용할 때를 고려해 만들어 놓은 기능임)
+(<a href = http://54.180.34.116:5000/api/?auto=1>http://54.180.34.116:5000/api/?auto=1 </a>) </p>
+            <hr>
+            <p>★ <b>탐색 범위 설정하여 음식점 검색</b>
+              <br> -> radius 파라미터 사용 시 자신이 탐색을 원하는 반경을 미터 단위로 지정할 수 있습니다.
+(<a href = http://54.180.34.116:5000/api/radius=1000>http://54.180.34.116:5000/api/radius=1000 </a>)</p>
+            <hr>
+            <p>★ <b>식사시간 파라미터 적용</b>
+              <br> -> mealstime 파라미터 사용 시 자신의 식사시간을 분 단위로 지정할 수 있습니다.
+(<a href = http://54.180.34.116:5000/api/mealstime=40>http://54.180.34.116:5000/api/mealstime=40</a>)</p>
+            <hr>
+            <p>★ <b>전체 파라미터를 사용자에 맞게 적용</b>
+              <br> -> 모든 파라미터는 함께 사용가능하며 입력 순서와 무관하게 사용가능하며 auto 파라미터가 1일때는 사용자가 입력한 위도 경도 값이 무시됩니다.
+              (<a href = http://54.180.34.116:5000/api/?auto=1&lat=37.32&lng=127.33&radius=1000&mealstime=40>http://54.180.34.116:5000/api/?auto=1&lat=37.32&lng=127.33&radius=1000&mealstime=40</a> )</p>
+            <hr>
+          </div>
+        </div>
+
+        <div class="card-header" >
+          <p> <b>Example</b> </p>
+        </div>
+
+        <div class="card card-outline-secondary my-4">
+          <div class="card-body" align="center">
+
+            <img src = "static/img/example.png"  width="700px" height="1000px"/>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+
+        <!-- /.card -->
+
+
+        <!-- /.card -->
+
+    </div>
+
+
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
