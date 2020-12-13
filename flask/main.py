@@ -311,15 +311,15 @@ def hello():
 
 @app.route('/api/')
 def get_html():
-    my_auto_loc = request.args.get('autolocation', False)
+    my_auto_loc = request.args.get('auto', 0)
     my_lt = request.args.get('lat', 36.7657)
     my_ln = request.args.get('lng', 127.2873)
     my_rad = request.args.get('radius', 2000)
     my_meals_t = request.args.get('mealstime', 20)
 
-    if my_auto_loc:
+    if(my_auto_loc is 1):
         return render_template('view.html', aa=green_light_api_auto(radius=my_rad, meals_time=my_meals_t))
-    else:
+    elif(my_auto_loc is 0):
         return render_template('view.html',
                                aa=green_light_api(lat=my_lt, lng=my_ln, radius=my_rad, meals_time=my_meals_t))
 
