@@ -71,11 +71,12 @@ def green_light_api_auto(radius = 2000, meals_time = 20):
 
         store_info["transit"] = response_google_direction.json()["routes"][0]["legs"][0]["duration"]["value"]
 
-        """
+
+
         response_naver_direction = requests.get(url_naver_direction + url_back_naver_direction,
                                                 headers=data_naver_direction)
         store_info["driving"] = int(response_naver_direction.json()["route"]["trafast"][0]["summary"]["duration"]/1000)
-        """
+
         db_list["result"].append(store_info)
 
     url_front_google_details = "https://maps.googleapis.com/maps/api/place/details/json?place_id="
@@ -125,9 +126,9 @@ def green_light_api_auto(radius = 2000, meals_time = 20):
             store_info["transit"] = response_google_direction.json()["routes"][0]["legs"][0]["duration"]["value"]
 
 
-            #response_naver_direction = requests.get(url_naver_direction + url_back_naver_direction,
-            #                                        headers=data_naver_direction)
-            #store_info["driving"] = int(response_naver_direction.json()["route"]["trafast"][0]["summary"]["duration"]/1000)
+            response_naver_direction = requests.get(url_naver_direction + url_back_naver_direction,
+                                                    headers=data_naver_direction)
+            store_info["driving"] = int(response_naver_direction.json()["route"]["trafast"][0]["summary"]["duration"]/1000)
 
             db_list["result"].append(store_info)
 
@@ -215,9 +216,9 @@ def green_light_api(lat = 0, lng = 0, radius = 2000, meals_time = 20):
         except:
             store_info["transit"] = -1
 
-        #response_naver_direction = requests.get(url_naver_direction + url_back_naver_direction,
-        #                                        headers=data_naver_direction)
-        #store_info["driving"] = int(response_naver_direction.json()["route"]["trafast"][0]["summary"]["duration"]/1000)
+        response_naver_direction = requests.get(url_naver_direction + url_back_naver_direction,
+                                                headers=data_naver_direction)
+        store_info["driving"] = int(response_naver_direction.json()["route"]["trafast"][0]["summary"]["duration"]/1000)
 
         db_list["result"].append(store_info)
 
